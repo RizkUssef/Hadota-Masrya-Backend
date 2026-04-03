@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91e8e1dfc8379caaf1c302443d694dfa",
+    "content-hash": "8756e9bb6bbcc61a292bbb8db4f5cd2d",
     "packages": [
         {
             "name": "brick/math",
@@ -3296,6 +3296,70 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "rizkussef/laravel-sql-to-migration",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RizkUssef/laravel-sql-to-migration.git",
+                "reference": "aa1fa5b90bceb87e525b3ca94cbadd2c299f59fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RizkUssef/laravel-sql-to-migration/zipball/aa1fa5b90bceb87e525b3ca94cbadd2c299f59fe",
+                "reference": "aa1fa5b90bceb87e525b3ca94cbadd2c299f59fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "conflict": {
+                "laravel/framework": "<9.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0"
+            },
+            "suggest": {
+                "illuminate/support": "For helper methods and improved Laravel integration"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rizkussef\\LaravelSqlToMigration\\Providers\\SqlToMigrationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rizkussef\\LaravelSqlToMigration\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RizkUssef",
+                    "email": "rizkusgt67@gmail.com"
+                }
+            ],
+            "description": "A Laravel package to convert raw SQL CREATE TABLE statements into Laravel migrations automatically.",
+            "keywords": [
+                "convert sql to laravel migration",
+                "laravel",
+                "laravel migration generator",
+                "mysql to laravel migration",
+                "php artisan migration generator",
+                "sql to migration"
+            ],
+            "support": {
+                "issues": "https://github.com/RizkUssef/laravel-sql-to-migration/issues",
+                "source": "https://github.com/RizkUssef/laravel-sql-to-migration/tree/v1.0.9"
+            },
+            "time": "2025-07-22T11:00:15+00:00"
         },
         {
             "name": "symfony/clock",
