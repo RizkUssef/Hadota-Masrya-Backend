@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('typing_indicators', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('conversation_id');
             $table->unsignedBigInteger('user_id');
             $table->timestamp('started_at')->nullable()->default('CURRENT_TIMESTAMP');

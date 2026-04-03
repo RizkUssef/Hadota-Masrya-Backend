@@ -9,8 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('user_settings', function (Blueprint $table) {
-
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('theme')->nullable()->default('LIGHT');
             $table->string('language', 10)->nullable()->default('EN');

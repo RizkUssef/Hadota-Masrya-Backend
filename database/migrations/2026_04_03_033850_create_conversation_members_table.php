@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('conversation_members', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('conversation_id');
             $table->unsignedBigInteger('user_id');
             $table->string('role')->nullable()->default('MEMBER');

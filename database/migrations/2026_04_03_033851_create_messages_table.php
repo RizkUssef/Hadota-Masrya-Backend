@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
-            $table->string('uuid');
+            $table->id();
+            $table->uuid('uuid')->unique();
             $table->unsignedBigInteger('conversation_id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('reply_to_id')->nullable();

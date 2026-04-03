@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('message_reactions', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('message_id');
             $table->unsignedBigInteger('user_id');
             $table->string('emoji', 10);

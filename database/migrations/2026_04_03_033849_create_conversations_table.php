@@ -9,9 +9,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('conversations', function (Blueprint $table) {
-
-            $table->bigIncrements('id')->nullable();
-            $table->string('uuid');
+            $table->id();
+            $table->uuid('uuid')->unique();
             $table->string('type')->nullable()->default('DIRECT');
             $table->string('name', 255)->nullable();
             $table->text('description')->nullable();

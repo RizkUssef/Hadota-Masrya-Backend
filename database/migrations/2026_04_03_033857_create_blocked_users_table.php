@@ -10,13 +10,13 @@ return new class extends Migration
     {
         Schema::create('blocked_users', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('blocker_id');
             $table->unsignedBigInteger('blocked_id');
             $table->string('reason', 255)->nullable();
             $table->timestamp('created_at')->nullable();
-            $table->foreign('blocker_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('NO ACTION');
-            $table->foreign('blocked_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('NO ACTION');
+            $table->foreign('blocker_id')->references('id')->on('users')->onDelete('NO ACTION')->onUpdate('NO ACTION');
+            $table->foreign('blocked_id')->references('id')->on('users')->onDelete('NO ACTION')->onUpdate('NO ACTION');
         });
     }
 

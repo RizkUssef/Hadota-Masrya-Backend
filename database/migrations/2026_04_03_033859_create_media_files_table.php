@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('media_files', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
-            $table->string('uuid');
+            $table->id();
+            $table->uuid('uuid')->unique();
             $table->unsignedBigInteger('uploaded_by');
             $table->string('disk', 50)->nullable()->default('S3');
             $table->string('path', 1000);

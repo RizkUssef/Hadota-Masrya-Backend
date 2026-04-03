@@ -10,14 +10,14 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
 
-            $table->bigIncrements('id')->nullable();
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('contact_id');
             $table->string('nickname', 100)->nullable();
             $table->string('is_favorite')->nullable()->default('FALSE');
             $table->timestamp('created_at')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('NO ACTION');
-            $table->foreign('contact_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('NO ACTION');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('NO ACTION')->onUpdate('NO ACTION');
+            $table->foreign('contact_id')->references('id')->on('users')->onDelete('NO ACTION')->onUpdate('NO ACTION');
         });
     }
 
