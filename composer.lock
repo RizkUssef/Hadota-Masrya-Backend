@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8756e9bb6bbcc61a292bbb8db4f5cd2d",
+    "content-hash": "77f75195c77d28f5ed18fd49b84f3e9d",
     "packages": [
         {
             "name": "brick/math",
@@ -3296,6 +3296,148 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "rizkussef/laravel-crud-api",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RizkUssef/laravel-crud-api.git",
+                "reference": "ffea01805a95a20c89704b468c9841d9c9b0447d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RizkUssef/laravel-crud-api/zipball/ffea01805a95a20c89704b468c9841d9c9b0447d",
+                "reference": "ffea01805a95a20c89704b468c9841d9c9b0447d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "mockery/mockery": "^1.5",
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rizkussef\\LaravelCrudApi\\ApiCrudServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rizkussef\\LaravelCrudApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rizk Ussef",
+                    "email": "rizkussef@gmail.com",
+                    "homepage": "https://github.com/rizkussef",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A clean, scalable Api CRUD package for the Service-based architecture for Laravel with advanced filtering, eager-loading relationships, and automatic resource resolution",
+            "homepage": "https://github.com/rizkussef/laravel-crud-api",
+            "keywords": [
+                "Relationships",
+                "api",
+                "api-resources",
+                "base-controller",
+                "base-service",
+                "crud",
+                "eager-loading",
+                "filtering",
+                "laravel",
+                "laravel api core crud",
+                "laravel base crud api",
+                "laravel crud api",
+                "laravel crud generator",
+                "laravel crud operations",
+                "laravel crud package",
+                "laravel-package",
+                "pagination",
+                "query-builder",
+                "rest",
+                "service-based-architecture"
+            ],
+            "support": {
+                "issues": "https://github.com/RizkUssef/laravel-crud-api/issues",
+                "source": "https://github.com/RizkUssef/laravel-crud-api/tree/v1.4.0"
+            },
+            "time": "2026-04-03T05:20:44+00:00"
+        },
+        {
+            "name": "rizkussef/laravel-snake-to-camel-case",
+            "version": "v1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RizkUssef/laravel-snake-to-camel-case.git",
+                "reference": "fed98ccd73360a58503dc0a4959912e2fd1e7e1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RizkUssef/laravel-snake-to-camel-case/zipball/fed98ccd73360a58503dc0a4959912e2fd1e7e1e",
+                "reference": "fed98ccd73360a58503dc0a4959912e2fd1e7e1e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rizkussef\\LaravelSnakeToCamelCase\\Providers\\SnakeToCamelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rizkussef\\LaravelSnakeToCamelCase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RizkUssef",
+                    "email": "rizkusgt67@gmail.com"
+                }
+            ],
+            "description": "A Laravel middleware package to automatically convert API response keys from snake_case to camelCase for frontend compatibility, and optionally convert request keys from camelCase to snake_case",
+            "keywords": [
+                "api",
+                "camel snake",
+                "camelcase",
+                "case conversion",
+                "json",
+                "key conversion",
+                "laravel",
+                "laravel middleware",
+                "middleware",
+                "request",
+                "response",
+                "snake_case",
+                "transform"
+            ],
+            "support": {
+                "issues": "https://github.com/RizkUssef/laravel-snake-to-camel-case/issues",
+                "source": "https://github.com/RizkUssef/laravel-snake-to-camel-case/tree/v1.0.8"
+            },
+            "time": "2025-07-22T10:48:08+00:00"
         },
         {
             "name": "rizkussef/laravel-sql-to-migration",

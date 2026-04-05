@@ -12,6 +12,8 @@
         "php": "^8.3",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
+        "rizkussef/laravel-crud-api": "^1.4",
+        "rizkussef/laravel-snake-to-camel-case": "^1.0",
         "rizkussef/laravel-sql-to-migration": "^1.0"
     },
     "require-dev": {
