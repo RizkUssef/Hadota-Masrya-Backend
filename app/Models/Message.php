@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 
 class Message extends Model
 {
@@ -32,6 +33,15 @@ class Message extends Model
             'edited_at' => 'datetime',
             'sent_at' => 'datetime',
         ];
+    }
+
+    protected static function booted(): void
+    {
+        static::creating(function (Message $message) {
+            if (empty($message->uuid)) {
+                $message->uuid = (string) Str::uuid();
+            }
+        });
     }
 
     public function conversation(): BelongsTo
