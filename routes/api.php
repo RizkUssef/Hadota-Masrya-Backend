@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\ConversationMemberController;
 use App\Http\Controllers\MediaFileController;
+use App\Http\Controllers\MessageAttachmentController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -23,3 +24,4 @@ Route::apiResource('contacts', ContactController::class);
 Route::apiResource('conversations', ConversationController::class);
 Route::apiResource('conversation-members', ConversationMemberController::class);
 Route::apiResource('media-files', MediaFileController::class);
+Route::apiResource('message-attachments', MessageAttachmentController::class);
