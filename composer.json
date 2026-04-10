@@ -11,6 +11,7 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^3.0",
         "rizkussef/laravel-crud-api": "^1.4",
         "rizkussef/laravel-snake-to-camel-case": "^1.0",
