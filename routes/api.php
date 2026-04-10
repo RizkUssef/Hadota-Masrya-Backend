@@ -7,6 +7,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\BlockedUserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConversationController;
+use App\Http\Controllers\ConversationMemberController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -19,3 +20,4 @@ Route::apiResource('messages', MessageController::class);
 Route::apiResource('blocked-users', BlockedUserController::class);
 Route::apiResource('contacts', ContactController::class);
 Route::apiResource('conversations', ConversationController::class);
+Route::apiResource('conversation-members', ConversationMemberController::class);
