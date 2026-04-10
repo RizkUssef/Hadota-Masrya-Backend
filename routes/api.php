@@ -14,12 +14,11 @@ use App\Http\Controllers\MessageReactionController;
 use App\Http\Controllers\MessageReadController;
 use App\Http\Controllers\PushTokenController;
 use App\Http\Controllers\TypingIndicatorController;
+use App\Http\Controllers\UserSettingController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-})->middleware('auth:sanctum');
-
-// add(BlockedUser):create all crud files for the BlockedUser using command api-crud:make from laravel-crud-api packages that i make 
+})->middleware('auth:sanctum'); 
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('messages', MessageController::class);
@@ -33,4 +32,5 @@ Route::apiResource('message-reactions', MessageReactionController::class);
 Route::apiResource('message-reads', MessageReadController::class);
 Route::apiResource('push-tokens', PushTokenController::class);
 Route::apiResource('typing-indicators', TypingIndicatorController::class);
+Route::apiResource('user-settings', UserSettingController::class);
 
