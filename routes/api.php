@@ -12,6 +12,7 @@ use App\Http\Controllers\MediaFileController;
 use App\Http\Controllers\MessageAttachmentController;
 use App\Http\Controllers\MessageReactionController;
 use App\Http\Controllers\MessageReadController;
+use App\Http\Controllers\PushTokenController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -29,3 +30,5 @@ Route::apiResource('media-files', MediaFileController::class);
 Route::apiResource('message-attachments', MessageAttachmentController::class);
 Route::apiResource('message-reactions', MessageReactionController::class);
 Route::apiResource('message-reads', MessageReadController::class);
+Route::apiResource('push-tokens', PushTokenController::class);
+
