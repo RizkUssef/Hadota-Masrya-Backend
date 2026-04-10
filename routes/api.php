@@ -13,6 +13,7 @@ use App\Http\Controllers\MessageAttachmentController;
 use App\Http\Controllers\MessageReactionController;
 use App\Http\Controllers\MessageReadController;
 use App\Http\Controllers\PushTokenController;
+use App\Http\Controllers\TypingIndicatorController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -31,4 +32,5 @@ Route::apiResource('message-attachments', MessageAttachmentController::class);
 Route::apiResource('message-reactions', MessageReactionController::class);
 Route::apiResource('message-reads', MessageReadController::class);
 Route::apiResource('push-tokens', PushTokenController::class);
+Route::apiResource('typing-indicators', TypingIndicatorController::class);
 
