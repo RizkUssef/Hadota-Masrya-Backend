@@ -11,6 +11,7 @@ use App\Http\Controllers\ConversationMemberController;
 use App\Http\Controllers\MediaFileController;
 use App\Http\Controllers\MessageAttachmentController;
 use App\Http\Controllers\MessageReactionController;
+use App\Http\Controllers\MessageReadController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -27,3 +28,4 @@ Route::apiResource('conversation-members', ConversationMemberController::class);
 Route::apiResource('media-files', MediaFileController::class);
 Route::apiResource('message-attachments', MessageAttachmentController::class);
 Route::apiResource('message-reactions', MessageReactionController::class);
+Route::apiResource('message-reads', MessageReadController::class);
