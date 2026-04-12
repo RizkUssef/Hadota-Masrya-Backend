@@ -15,10 +15,18 @@ use App\Http\Controllers\MessageReadController;
 use App\Http\Controllers\PushTokenController;
 use App\Http\Controllers\TypingIndicatorController;
 use App\Http\Controllers\UserSettingController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\AuthController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-})->middleware('auth:sanctum'); 
+})->middleware('auth:sanctum');
+
+Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 Route::apiResource('users', UserController::class);
 Route::apiResource('messages', MessageController::class);
