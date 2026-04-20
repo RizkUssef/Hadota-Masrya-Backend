@@ -4,9 +4,8 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Facades\Auth;
 
-class ConversationMemberResource extends JsonResource
+class ConversationMemberItemResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +15,7 @@ class ConversationMemberResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'conversation_id' => $this->conversation_id,
-            'user_id' => $this->user_id,
-            'user' => new UserResource($this->whenLoaded('user')),
+            'user' => new UserItemResource($this->whenLoaded('user')),
             'role' => $this->role,
             'nickname' => $this->nickname,
             'is_muted' => $this->is_muted,
